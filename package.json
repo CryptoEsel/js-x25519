@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "Javascript implementation of Elliptic curve Diffie-Hellman key exchange over Curve25519",
   "main": "x25519.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "test",
+    "prod": "cross-env BABEL_ENV=production babel ./x25519.js --out-file ./lib/x25519.js.min.js",
+    "build": "babel ./x25519.js --out-file ./lib/x25519.js",
+    "test": "tape -r babel-register test/**/*.test.js | tap-spec",
+    "watch": "tape-watch test/**/*.test.js -r babel-register -p tap-spec",
     "lint": "standard x25519.js"
   },
   "repository": {
@@ -27,6 +33,17 @@
   },
   "homepage": "https://github.com/CryptoEsel/js-x25519#readme",
   "devDependencies": {
-    "standard": "^10.0.2"
+    "babel-cli": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-babili": "0.0.12",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "babili": "0.0.12",
+    "cross-env": "^4.0.0",
+    "standard": "^10.0.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3",
+    "tape-watch": "^2.3.0"
   }
 }
