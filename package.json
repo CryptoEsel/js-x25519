@@ -1,0 +1,32 @@
+{
+  "name": "js-x25519",
+  "version": "1.0.0",
+  "description": "Javascript implementation of Elliptic curve Diffie-Hellman key exchange over Curve25519",
+  "main": "x25519.js",
+  "scripts": {
+    "test": "test",
+    "lint": "standard x25519.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CryptoEsel/js-x25519.git"
+  },
+  "keywords": [
+    "cryptography",
+    "curve25519",
+    "ed25519",
+    "x25519",
+    "public",
+    "private",
+    "key"
+  ],
+  "author": "Mykola Bubelich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CryptoEsel/js-x25519/issues"
+  },
+  "homepage": "https://github.com/CryptoEsel/js-x25519#readme",
+  "devDependencies": {
+    "standard": "^10.0.2"
+  }
+}
