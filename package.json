@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "prod": "cross-env BABEL_ENV=production babel ./x25519.js --out-file ./lib/x25519.js.min.js",
+    "prod": "cross-env BABEL_ENV=production babel ./x25519.js --out-file ./lib/x25519.min.js",
     "build": "babel ./x25519.js --out-file ./lib/x25519.js",
     "test": "tape -r babel-register test/**/*.test.js | tap-spec",
     "watch": "tape-watch test/**/*.test.js -r babel-register -p tap-spec",
